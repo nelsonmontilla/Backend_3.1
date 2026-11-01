@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const productoRutas = require("./rutas/productoRutas");
+const categoriaRutas = require("./rutas/categoriaRutas");
 const authRutas = require("./rutas/authRutas");
 const usuarioRutas = require("./rutas/usuarioRutas");
 const favoritosRutas = require("./rutas/favoritosRutas");
@@ -32,6 +33,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api", productoRutas);
+app.use("/api", categoriaRutas);
 app.use("/api/auth", authRutas);
 app.use("/api/usuarios", usuarioRutas);
 app.use("/api/favoritos", favoritosRutas);
